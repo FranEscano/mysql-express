@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    build: ./
+    env_file: ./.env
+    ports:
+      - "9898:9898"
+    environment:
+      DB_USER: root
+      DB_NAME: my_new_db
+
+volumes:
+  mysql:
