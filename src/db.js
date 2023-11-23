@@ -1,13 +1,14 @@
-import { createConnection } from 'mysql2'
-import dotenv from 'dotenv'
+const mysql = require( 'mysql2')
+const dotenv = require ('dotenv')
 
 // require('dotenv').config()
 dotenv.config()
 
-const database = createConnection({
+const database = mysql.createPool({
+    host: process.env.DB_HOST,
     user: process.env.DB_USER,
-    // password: process.env.DB_PASSWORD,
+    password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 })
 
-export default database
+module.exports = database

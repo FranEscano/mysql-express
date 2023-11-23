@@ -1,6 +1,6 @@
-import { Router } from 'express'
-import controller from '../controllers/controllers.js'
-import { body } from 'express-validator'
+const { Router } = require('express')
+const {body} = require('express-validator')
+const controller = require('../controllers/controllers.js')
 const router = new Router()
 
 router.get('/init', controller.initDatabase)
@@ -12,4 +12,4 @@ router.post('/subscribe',
     controller.addSubscriber
 )
 
-export default router
+module.exports = router
