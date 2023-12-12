@@ -21,11 +21,21 @@ services:
             - "3306:3306"
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-            MYSQL_USER: "mysql"
-            MYSQL_PASSWORD: "pass"
+            MYSQL_HOST: "mysql"
+            # MYSQL_USER: "root"
+            # MYSQL_PASSWORD: "pass"
             MYSQL_DATABASE: "my_new_db"
         healthcheck:
             test: ["CMD", "mysqladmin" ,"ping", "-h", "0.0.0.0"]
             timeout: 20s
             retries: 10
-        
+
+    postman:
+        image: postman/newman:alpine
+        container_name: postmanTests
+        command: run DOCKER-express-mysql-postman.postman_collection.json -k -r htmlextra,cli,json --reporter-htmlextra-export="reports/DOCKER-express-mysql-postman.postman_collection.html" --reporter-json-export="reports/DOCKER-express-mysql-postman.postman_collection.json"
+        volumes:
+            - ./:/etc/newman
+        depends_on:
+            - "express"
+            - "mysql"

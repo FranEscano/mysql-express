@@ -31,7 +31,7 @@ This repository contains an Express server connected to a MySQL database. You ca
 
 2. Enter the connection information:
 
-   - **Host:** localhost
+   - **Host:** mysql
    - **Port:** 3306
    - **User:** root
    - **Password:** password
@@ -57,11 +57,3 @@ This repository includes Docker files to facilitate deployment through Docker co
 
    The server will be available at [http://localhost:9898](http://localhost:9898).
 
-## Download Images from Docker Hub
-(This option is still in development)
-
-I am currently working on providing pre-built Docker images. You can download them from Docker Hub, but for now, please follow the instructions to clone the repository.
-
-Now, you can explore and manage the database through MySQL Workbench while running the Express server.
-
-If you encounter any issues or have questions, feel free to open an issue on the GitHub repository. Thank you for using this application!
