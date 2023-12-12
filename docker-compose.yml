@@ -33,9 +33,9 @@ services:
     postman:
         image: postman/newman:alpine
         container_name: postmanTests
-        command: run DOCKER-express-mysql-postman.postman_collection.json -k -r htmlextra,cli,json --reporter-htmlextra-export="reports/DOCKER-express-mysql-postman.postman_collection.html" --reporter-json-export="reports/DOCKER-express-mysql-postman.postman_collection.json"
+        command: run DOCKER-express-mysql-postman.postman_collection.json  -k -r cli,json --reporter-json-export="reports/DOCKER-express-mysql-postman.postman_collection.json"
         volumes:
-            - ./:/etc/newman
+            - ./Postman Collections:/etc/newman
         depends_on:
             - "express"
             - "mysql"
