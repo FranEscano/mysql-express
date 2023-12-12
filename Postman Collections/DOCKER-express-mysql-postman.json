@@ -11,13 +11,13 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "cb7e1d72-d00c-4533-9a39-a866a5aecb77",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
-						"type": "text/javascript",
-						"id": "cb7e1d72-d00c-4533-9a39-a866a5aecb77"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -46,6 +46,7 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "364bbf20-2c07-4ceb-9136-0d8c88a255a8",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -54,8 +55,7 @@
 							"var jsonData = pm.response.json()\r",
 							"pm.globals.set(\"UserId\", jsonData.emails.insertId)"
 						],
-						"type": "text/javascript",
-						"id": "364bbf20-2c07-4ceb-9136-0d8c88a255a8"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\": \"Fran\",\r\n    \"lastname\": \"Escano\",\r\n    \"email\": \"fe@fe.com\"\r\n}",
+					"raw": "{\r\n    \"firstname\": \"Francisco\",\r\n    \"lastname\": \"Escano\",\r\n    \"email\": \"fe@fe.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
