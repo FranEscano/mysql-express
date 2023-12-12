@@ -57,3 +57,8 @@ This repository includes Docker files to facilitate deployment through Docker co
 
    The server will be available at [http://localhost:9898](http://localhost:9898).
 
+## Postman Integration
+
+The repository includes a Postman collection for testing this app. This collection will run when the container is started in Docker. The results can be viewed directly in the console or in a automatically generated JSON file that will be saved in the local repository of the application.
+
+This collection runs on a pre-assembled Docker image with Node and Newman installed. The docker-compose.yml includes instructions for this collection to function. Additionally, the Postman collection is integrated with the GitHub repository, so every time a change is made to the collection, it will be updated in the repository.
